@@ -1,7 +1,7 @@
 ; https://github.com/mnaberez/py65
 
-; mads test.asm
-; py65mon -l test.obx -g 200
+; mads py65-mads-template.asm
+; py65mon -l py65-mads-template.obx -g 200
 
         opt h-
 
