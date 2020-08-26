@@ -14,4 +14,4 @@
       bne @-
       brk
 
-text  .by 'MADS Rulez!' 0 '??'
+text  .by 'MADS Rulez!' 0
