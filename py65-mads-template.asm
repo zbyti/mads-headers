@@ -3,15 +3,16 @@
 ; mads py65-mads-template.asm
 ; py65mon -l py65-mads-template.obx -g 200
 
-        opt h-
+      opt h-
 
-        org 0 \ brk \ .align $200,0
+      org 0 \ brk \ .align $200,0
 
-        ldx #0
-loop:   lda text,x
-        sta $f001
-        inx
-        bne loop
-        brk
+      ldx #0
+loop: lda text,x
+      beq end
+      sta $f001
+      inx
+      bne loop
+end:  brk
 
-text:  .byte 'MADS Rulez!',0
+text: .by 'MADS Rulez!' 0
