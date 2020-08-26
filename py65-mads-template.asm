@@ -8,11 +8,11 @@
       org 0 \ brk \ .align $200,0
 
       ldx #0
-loop: lda text,x
+@     lda text,x
       beq end
       sta $f001
       inx
-      bne loop
-end:  brk
+      jmp @-
+end   brk
 
-text: .by 'MADS Rulez!' 0
+text  .by 'MADS Rulez!' 0
