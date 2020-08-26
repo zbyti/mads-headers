@@ -12,6 +12,6 @@ loop:   lda text,x
         sta $f001
         inx
         bne loop
-        rts
+        brk
 
 text:  .byte 'MADS Rulez!',0
