@@ -11,5 +11,6 @@ next  .word 0, 0
 
       org $0810
 
-@     inc $d020
-      jmp @-
+      lda #0
+      sta $d020
+      rts
