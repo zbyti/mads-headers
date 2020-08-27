@@ -12,5 +12,5 @@ entry lda text,x
       bne @-
       rts
 
-text: .by +$c0 'MADS'
+text  .by +$c0 'MADS'
       .by 0
