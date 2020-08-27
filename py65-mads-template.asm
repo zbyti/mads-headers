@@ -3,15 +3,20 @@
 ; mads py65-mads-template.asm
 ; py65mon -l py65-mads-template.obx -g 200
 
+; $a enter
+; $d home
+
       opt h-
 
       org 0 \ brk \ .align $200,0
 
-      ldx #$ff
-@     inx
-      lda text,x
-      sta $f001
-      bne @-
-      brk
 
-text  .by 'MADS Rulez!' 0
+      ldx #0
+      jmp entry
+@     inx
+      sta $f001
+entry lda text,x
+      bne @-
+end   brk
+
+text  .by 'MADS Rulez!' $a 'Template by Zbyti' 0
