@@ -10,7 +10,7 @@
       inx
 entry lda text,x
       bne @-
-end   rts
+      rts
 
 text: .by +$c0 'MADS'
       .by 0

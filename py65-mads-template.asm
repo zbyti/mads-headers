@@ -17,6 +17,6 @@
       sta $f001
 entry lda text,x
       bne @-
-end   brk
+      brk
 
 text  .by 'MADS Rulez!' $a 'Template by Zbyti' 0
