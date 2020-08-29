@@ -12,7 +12,7 @@
 
 
       ldx #0
-      jmp entry
+      beq entry
 @     inx
       sta $f001
 entry lda text,x
